@@ -1,0 +1,89 @@
+body {
+    background-color:#FFFFFF; /*背景*/
+    font-family: 'Nunito','Kosugi Maru', sans-serif;/*フォント*/
+    font-size: 14px; /*素の文字？*/
+    color: #191970; /*素の文字の色？紫*/
+    margin: 0;
+}
+
+
+/*=============
+.bg_pattern
+==============*/
+
+.bg_pattern {
+  position: fixed;/*画面のきまった位置に固定する*/
+  top: 0;/*トップから0*/
+  left: 0;/*左から0の位置に固定するよ（つまり左上寄せだね？）*/
+  width: 100vw;/*viewportの幅に対する割合、つまり表示されている画面幅100％で表示ということ*/
+  height: 100vh;/*↑の高さバージョン*/
+  background-color: #C9B3C1;
+  opacity: 0.4;/*不透明度*/
+  z-index: -1;/*大きなz-indexをもつ要素が前面に表示される。-1なので背景位置*/
+}
+.Rectangles {
+  background-image:  repeating-linear-gradient(45deg, #DACCD5 25%, transparent 25%, transparent 75%, #DACCD5 75%, #DACCD5), repeating-linear-gradient(45deg, #DACCD5 25%, #C9B3C1 25%, #C9B3C1 75%, #DACCD5 75%, #DACCD5);
+  /*45度方向に軸を延ばし、25％で#DACCD5色になり、25％で透明になり、75％で透明になり、75％で#DACCD5色になり…？わからん*/
+  background-position: 0 0, 20px 20px;/*left top, right bottom*/
+  background-size: 40px 40px;
+}
+
+.header-title-area {
+  background-color:#FFFFFF;
+  margin-top: 35px;
+  margin-bottom: 17px;
+}
+
+#logo {
+  font-size: 24px;
+}
+
+h1 {
+    margin: 0px;
+    text-align:center;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.container {
+  width: 350px; /*要素自体の横幅（高さはheight）*/
+  margin:0 auto;
+}
+
+#start_button[type="button"] {
+  border: 6px solid #0E381C;
+  outline: 0;
+  width: 170px;
+  height: 170px;
+  background-color:#176230;
+  color:#ffffff;
+  font-size: 21px;
+  border-radius: 85px;/* 左上 | 右上 | 右下 | 左下 */
+  margin-top:20px;
+  margin-left:90px;
+  margin-bottom:30px;
+}
+
+#counter {
+  margin:0px;
+  font-size: 16px;
+  text-align:center;
+  color:#0E381C;
+}
+
+#repeat_button[type="button"] {
+  border:3px solid #25934A;
+  width:130px;
+  height:45px;
+  background-color:#2DBB5C;
+  color:#FFFFFF;
+  font-size: 16px;
+  border-radius:12px ;
+  margin-left:110px;
+  margin-top:30px;
+}
+
+
+
+
+
