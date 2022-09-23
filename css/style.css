@@ -73,14 +73,26 @@ h1 {
 
 #repeat_button[type="button"] {
   border:3px solid #25934A;
-  width:130px;
+  width:170px;
   height:45px;
   background-color:#2DBB5C;
   color:#FFFFFF;
-  font-size: 16px;
+  font-size: 14px;
   border-radius:12px ;
-  margin-left:110px;
+  margin-left:90px;
   margin-top:30px;
+}
+
+#anotherhint_button[type="button"] {
+  border:3px solid #25934A;
+  width:170px;
+  height:45px;
+  background-color:#2DBB5C;
+  color:#FFFFFF;
+  font-size: 14px;
+  border-radius:12px ;
+  margin-left:90px;
+  margin-top:15px;
 }
 
 
