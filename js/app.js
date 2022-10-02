@@ -22,15 +22,15 @@ window.onload = function(){
   const repeat_button = document.getElementById("repeat_button");
   const anotherhint_button = document.getElementById("anotherhint_button");
   let items = [
-    { sound: ["../audio/	1-1	.mp3" , "../audio/	1-2	.mp3" , "../audio/	1-3	.mp3" , "../audio/	1-4	.mp3" , "../audio/	1-5	.mp3" , "../audio/	1-6	.mp3" , "../audio/	1-7	.mp3" , "../audio/	1-8	.mp3"] , q: 	8	 },
-    { sound: ["../audio/	2-1	.mp3" , "../audio/	2-2	.mp3" , "../audio/	2-3	.mp3" , "../audio/	2-4	.mp3" , "../audio/	2-5							.mp3"] , q: 	5	 },
-    { sound: ["../audio/	3-1	.mp3" , "../audio/	3-2	.mp3" , "../audio/	3-3	.mp3" , "../audio/	3-4									.mp3"] , q: 	4	 },
-    { sound: ["../audio/	4-1	.mp3" , "../audio/	4-2	.mp3" , "../audio/	4-3	.mp3" , "../audio/	4-4	.mp3" , "../audio/	4-5	.mp3" , "../audio/	4-6					.mp3"] , q: 	6	 },
-    { sound: ["../audio/	5-1	.mp3" , "../audio/	5-2	.mp3" , "../audio/	5-3	.mp3" , "../audio/	5-4	.mp3" , "../audio/	5-5							.mp3"] , q: 	5	 },
-    { sound: ["../audio/	6-1	.mp3" , "../audio/	6-2	.mp3" , "../audio/	6-3	.mp3" , "../audio/	6-4									.mp3"] , q: 	4	 },
-    { sound: ["../audio/	7-1	.mp3" , "../audio/	7-2	.mp3" , "../audio/	7-3											.mp3"] , q: 	3	 },
-    { sound: ["../audio/	8-1	.mp3" , "../audio/	8-2	.mp3" , "../audio/	8-3	.mp3" , "../audio/	8-4									.mp3"] , q: 	4	 },
-    { sound: ["../audio/	9-1	.mp3" , "../audio/	9-2	.mp3" , "../audio/	9-3	.mp3" , "../audio/	9-4									.mp3"] , q: 	4	 },
+    { sound: ["../audio/	01-1	.mp3" , "../audio/	01-2	.mp3" , "../audio/	01-3	.mp3" , "../audio/	01-4	.mp3" , "../audio/	01-5	.mp3" , "../audio/	01-6	.mp3" , "../audio/	01-7	.mp3" , "../audio/	01-8	.mp3"] , q: 	8	 },
+    { sound: ["../audio/	02-1	.mp3" , "../audio/	02-2	.mp3" , "../audio/	02-3	.mp3" , "../audio/	02-4	.mp3" , "../audio/	02-5							.mp3"] , q: 	5	 },
+    { sound: ["../audio/	03-1	.mp3" , "../audio/	03-2	.mp3" , "../audio/	03-3	.mp3" , "../audio/	03-4									.mp3"] , q: 	4	 },
+    { sound: ["../audio/	04-1	.mp3" , "../audio/	04-2	.mp3" , "../audio/	04-3	.mp3" , "../audio/	04-4	.mp3" , "../audio/	04-5	.mp3" , "../audio/	04-6					.mp3"] , q: 	6	 },
+    { sound: ["../audio/	05-1	.mp3" , "../audio/	05-2	.mp3" , "../audio/	05-3	.mp3" , "../audio/	05-4	.mp3" , "../audio/	05-5							.mp3"] , q: 	5	 },
+    { sound: ["../audio/	06-1	.mp3" , "../audio/	06-2	.mp3" , "../audio/	06-3	.mp3" , "../audio/	06-4									.mp3"] , q: 	4	 },
+    { sound: ["../audio/	07-1	.mp3" , "../audio/	07-2	.mp3" , "../audio/	07-3											.mp3"] , q: 	3	 },
+    { sound: ["../audio/	08-1	.mp3" , "../audio/	08-2	.mp3" , "../audio/	08-3	.mp3" , "../audio/	08-4									.mp3"] , q: 	4	 },
+    { sound: ["../audio/	09-1	.mp3" , "../audio/	09-2	.mp3" , "../audio/	09-3	.mp3" , "../audio/	09-4									.mp3"] , q: 	4	 },
     { sound: ["../audio/	10-1	.mp3" , "../audio/	10-2	.mp3" , "../audio/	10-3	.mp3" , "../audio/	10-4									.mp3"] , q: 	4	 },
     { sound: ["../audio/	11-1	.mp3" , "../audio/	11-2	.mp3" , "../audio/	11-3											.mp3"] , q: 	3	 },
     { sound: ["../audio/	12-1	.mp3" , "../audio/	12-2	.mp3" , "../audio/	12-3	.mp3" , "../audio/	12-4									.mp3"] , q: 	4	 },
@@ -134,6 +134,7 @@ window.onload = function(){
     console.log(itemNo);    
     yomiage();
     console.log("OK");
+    console.log(itemNo,randnum,items[itemNo].sound[randnum]);
   })
   
   repeat_button.addEventListener("click", () => { 
@@ -159,3 +160,12 @@ window.onload = function(){
 
   
 }
+
+/*github
+
+・リモートリポジトリに push
+　- cd ~/environment/gitsample ： gitsample に移動
+　- git remote add origin git@github.com:アカウント名/リポジトリ名.git ： 新しいローカルリポジトリを利用するときに必要なコマンド
+　- git push origin main　（旧：git push -u origin master）　：　push するために入力するコマンド
+　- ～～object　：　X done　みたいに出たら完了
+　- GitHubのリポジトリを見るとできてるはず*/
