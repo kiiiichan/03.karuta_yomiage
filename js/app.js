@@ -97,7 +97,7 @@ window.onload = function(){
   let yomiage = () => {
     
     randq = items[itemNo].q;
-    randnum = Math.floor( Math.random() * items[i].q );
+    randnum = Math.floor( Math.random() * items[itemNo].q );
  　　let yomiageSound = new Audio(items[itemNo].sound[randnum]);
  　　
     yomiageSound.play();
@@ -165,7 +165,13 @@ window.onload = function(){
 
 ・リモートリポジトリに push
 　- cd ~/environment/gitsample ： gitsample に移動
-　- git remote add origin git@github.com:アカウント名/リポジトリ名.git ： 新しいローカルリポジトリを利用するときに必要なコマンド
+  - git status ： 最後のコミットから変更があったファイルを確認
+  - git add トラッキング状態にしたいファイル名　：　このファイルをトラッキング状態にするよ
+  - git add .　：　このディレクトリ配下すべてのファイルをトラッキング状態にするよ（コミットしてないファイルすべてをする場合もこれでOK）
+  - git commit -m "コミットメッセージ"　：　どういう理由でコミットしたのかをコメントで入力。
+　  ※ -m　はオプション
+  - git log　：　コミットしたファイルや履歴の確認
+(　- git remote add origin git@github.com:アカウント名/リポジトリ名.git ： 新しいローカルリポジトリを利用するときに必要なコマンド)
 　- git push origin main　（旧：git push -u origin master）　：　push するために入力するコマンド
 　- ～～object　：　X done　みたいに出たら完了
 　- GitHubのリポジトリを見るとできてるはず*/
