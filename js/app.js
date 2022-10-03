@@ -147,7 +147,7 @@ window.onload = function(){
   anotherhint_button.addEventListener("click", () => { 
     console.log("anotherhint");
     
-    if (randnum == items[i].q-1) {
+    if (randnum == items[itemNo].q-1) {
       randnum=0;
 
     } else {
