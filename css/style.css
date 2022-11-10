@@ -34,8 +34,15 @@ body {
   margin-bottom: 17px;
 }
 
-#logo {
+#logo_button[type="button"] {
+  border: 1px solid #FFFFFF;
+  font-family: 'Nunito','Kosugi Maru', sans-serif;/*フォント*/
   font-size: 24px;
+  margin-left:102.5px;
+  width: 170px;
+  height: 45px;
+  color:#191970;
+  background-color:#FFFFFF;
 }
 
 h1 {

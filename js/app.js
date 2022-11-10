@@ -19,9 +19,81 @@ window.onload = function(){
   
   //　変数定義
   const start_button = document.getElementById("start_button");
+  const logo_button = document.getElementById("logo_button");
   const repeat_button = document.getElementById("repeat_button");
   const anotherhint_button = document.getElementById("anotherhint_button");
-  let items = [
+  let items_rekisi = [
+    { sound: ["../audio_rekisi/	1-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	2-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	3-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	4-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	5-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	6-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	7-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	8-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	9-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	10-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	11-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	12-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	13-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	14-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	15-1	.m4a" , "../audio/	15-2	.m4a" , "../audio/	15-3			.m4a"] , q: 	3	 },
+    { sound: ["../audio_rekisi/	16-1	.m4a" , "../audio/	16-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	17-1	.m4a" , "../audio/	17-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	18-1	.m4a" , "../audio/	18-2	.m4a" , "../audio/	18-3			.m4a"] , q: 	3	 },
+    { sound: ["../audio_rekisi/	19-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	20-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	21-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	22-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	23-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	24-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	25-1	.m4a" , "../audio/	25-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	26-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	27-1	.m4a" , "../audio/	27-2	.m4a" , "../audio/	27-3			.m4a"] , q: 	3	 },
+    { sound: ["../audio_rekisi/	28-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	29-1	.m4a" , "../audio/	29-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	30-1	.m4a" , "../audio/	30-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	31-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	32-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	33-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	34-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	35-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	36-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	37-1	.m4a" , "../audio/	37-2	.m4a" , "../audio/	37-3			.m4a"] , q: 	3	 },
+    { sound: ["../audio_rekisi/	38-1	.m4a" , "../audio/	38-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	39-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	40-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	41-1	.m4a" , "../audio/	41-2	.m4a" , "../audio/	41-3	.m4a" , "../audio/	41-4	.m4a"] , q: 	4	 },
+    { sound: ["../audio_rekisi/	42-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	43-1	.m4a" , "../audio/	43-2	.m4a" , "../audio/	43-3	.m4a" , "../audio/	43-4	.m4a"] , q: 	4	 },
+    { sound: ["../audio_rekisi/	44-1	.m4a" , "../audio/	44-2	.m4a" , "../audio/	44-3	.m4a" , "../audio/	44-4	.m4a"] , q: 	4	 },
+    { sound: ["../audio_rekisi/	45-1	.m4a" , "../audio/	45-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	46-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	47-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	48-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	49-1	.m4a" , "../audio/	49-2	.m4a" , "../audio/	49-3	.m4a" , "../audio/	49-4	.m4a"] , q: 	4	 },
+    { sound: ["../audio_rekisi/	50-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	51-1	.m4a" , "../audio/	51-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	52-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	53-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	54-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	55-1	.m4a" , "../audio/	55-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	56-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	57-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	58-1	.m4a" , "../audio/	58-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	59-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	60-1	.m4a" , "../audio/	60-2					.m4a"] , q: 	2	 },
+    { sound: ["../audio_rekisi/	61-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	62-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	63-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	64-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	65-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	66-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	67-1							.m4a"] , q: 	1	 },
+    { sound: ["../audio_rekisi/	68-1							.m4a"] , q: 	1	 },
+    ]
+    
+  let items_tiri = [
     { sound: ["../audio/	01-1	.mp3" , "../audio/	01-2	.mp3" , "../audio/	01-3	.mp3" , "../audio/	01-4	.mp3" , "../audio/	01-5	.mp3" , "../audio/	01-6	.mp3" , "../audio/	01-7	.mp3" , "../audio/	01-8	.mp3"] , q: 	8	 },
     { sound: ["../audio/	02-1	.mp3" , "../audio/	02-2	.mp3" , "../audio/	02-3	.mp3" , "../audio/	02-4	.mp3" , "../audio/	02-5							.mp3"] , q: 	5	 },
     { sound: ["../audio/	03-1	.mp3" , "../audio/	03-2	.mp3" , "../audio/	03-3	.mp3" , "../audio/	03-4									.mp3"] , q: 	4	 },
@@ -69,8 +141,8 @@ window.onload = function(){
     { sound: ["../audio/	45-1	.mp3" , "../audio/	45-2	.mp3" , "../audio/	45-3											.mp3"] , q: 	3	 },
     { sound: ["../audio/	46-1	.mp3" , "../audio/	46-2	.mp3" , "../audio/	46-3	.mp3" , "../audio/	46-4	.mp3" , "../audio/	46-5	.mp3" , "../audio/	46-6					.mp3"] , q: 	6	 },
     { sound: ["../audio/	47-1	.mp3" , "../audio/	47-2	.mp3" , "../audio/	47-3	.mp3" , "../audio/	47-4									.mp3"] , q: 	4	 },
-
     ];
+  const logo = document.getElementById("logo_button");
   const counter = document.getElementById("counter");
 //  let yomiage = new Audio(itemsounds[i,randnum]);
   let itemNo = -1;
@@ -79,8 +151,7 @@ window.onload = function(){
   var randq;
   
   //変数定義終わり
-
-    
+  
   // 関数１．配列をシャッフル（ChallengeClass）
   let itemShuffle = (items) => {
       for (let i = items.length - 1; i >= 0; i--) {
@@ -124,13 +195,32 @@ window.onload = function(){
 
   
   //★★★プログラム
+
+  logo.textContent = "地理かるた"
+  let items = items_tiri; 
   itemShuffle(items);
-    console.log("shuffled");
+  
+  //★歴史と地理の入れ替え
+  
+  logo_button.addEventListener("click", () => {   
+    if (logo.textContent == "地理かるた") {
+      logo.textContent = "歴史かるた" 
+      items = items_rekisi
+    } else {
+      logo.textContent = "地理かるた"
+      items = items_tiri
+    }
+    
+    itemNo = -1;
+    i=1;
+    itemShuffle(items);
+  })
+    
     
   start_button.addEventListener("click", () => { 
     console.log("started");
     itemNo=itemNo+1;
-    counter.textContent = itemNo+1 + "／47枚";
+    counter.textContent = itemNo+1 + "／" + items.length + "枚";
     console.log(itemNo);    
     yomiage();
     console.log("OK");
